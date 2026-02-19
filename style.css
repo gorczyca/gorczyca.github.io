@@ -1,0 +1,126 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, serif;
+  color: #222;
+  background: #fff;
+  max-width: 720px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: #1a5276; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+header { margin-bottom: 56px; }
+header h1 { font-size: 2rem; font-weight: normal; margin-bottom: 6px; }
+header p { color: #555; font-size: 1rem; }
+header .links { margin-top: 14px; font-size: 0.9rem; }
+header .links * { margin-right: 16px; }
+
+/* Sections */
+section { margin-bottom: 52px; }
+section h2 {
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+}
+
+#about { margin-bottom: 52px; }
+
+/* Papers */
+.paper {
+  display: grid;
+  grid-template-columns: 6rem 1fr auto;
+  gap: 0 16px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.paper-venue {
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #444;
+  padding-top: 2px;
+  text-align: left;
+}
+
+.paper-title { font-style: italic; }
+.paper-authors { color: #555; font-size: 0.9rem; }
+
+.paper-links {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.paper-links a { margin-left: 10px; }
+
+/* Software */
+.software-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 16px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.software-name {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.software-desc {
+  color: #555;
+  font-size: 0.9rem;
+  grid-column: 1;
+}
+
+.software-links {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.software-links a { margin-left: 10px; }
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding-top: 40px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #30373f;
+    color: #f9d8ae;
+  }
+
+  a { color: #c9a87a; }
+
+  header p { color: #b8a090; }
+
+  section h2 {
+    color: #8a7a6a;
+    border-bottom-color: #4a4f56;
+  }
+
+  .paper-venue { color: #c9b89a; }
+  .paper-authors,
+  .software-desc { color: #b8a090; }
+}
