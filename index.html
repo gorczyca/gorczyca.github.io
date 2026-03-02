@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="
+  schema: https://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  dc: http://purl.org/dc/elements/1.1/
+">
 
 <head>
   <meta charset="UTF-8">
@@ -10,76 +14,112 @@
 
 <body>
 
-  <header>
-    <h1>Piotr Gorczyca</h1>
+  <header typeof="schema:Person" about="">
+    <h1 property="schema:name">Piotr Gorczyca</h1>
     <p><!-- Your title and institution here, e.g.: Postdoctoral Researcher, TU Dresden --></p>
     <div class="links">
       <span>gorczycapj [at] gmail [dot] com</span>
-      <a href="https://scholar.google.com/citations?user=06nhyMcAAAAJ" target="_blank">Google Scholar</a>
-      <a href="https://github.com/gorczyca" target="_blank">GitHub</a>
-      <a href="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en" target="_blank">TU Dresden</a>
+      <a property="schema:url" href="https://scholar.google.com/citations?user=06nhyMcAAAAJ" target="_blank">Google Scholar</a>
+      <a property="schema:url" href="https://github.com/gorczyca" target="_blank">GitHub</a>
+      <a property="schema:url" href="https://iccl.inf.tu-dresden.de/web/Piotr_Gorczyca/en" target="_blank">TU Dresden</a>
       <!-- <a href="cv.pdf">CV</a> -->
     </div>
+
+    <p property="schema:description" id="about">
+      I am a researcher and PhD student at TU Dresden (expected defence 2026), interested in semantic web, symbolic AI,
+      and non-monotonic reasoning.
+    </p>
+
   </header>
-
-  <p id="about">
-    I am a researcher and PhD student at TU Dresden (expected defence 2026), interested in semantic web, symbolic AI,
-    and non-monotonic reasoning.
-  </p>
-
 
   <section id="papers">
     <h2>Papers</h2>
 
-    <div class="paper">
-      <div class="paper-venue">AAAI-2026</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">AAAI-2026</span></div>
       <div class="paper-main">
-        <div class="paper-title">Non-Monotonic S4F Standpoint Logic</div>
-        <div class="paper-authors">Gorczyca and Straß</div>
+        <div class="paper-title" property="schema:name schema:headline">Non-Monotonic S4F Standpoint Logic</div>
+        <div class="paper-authors">
+          <span property="schema:author" resource="">Gorczyca</span> and
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Straß</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/en"></span>
+        </div>
       </div>
       <div class="paper-links">
         <a href="https://cl-tud.github.io/talks/2026/aaai/non-mon-s4f-standpoint-logic" target="_blank">Slides</a>
-        <a href="https://arxiv.org/pdf/2511.10449" target="_blank">PDF</a>
+        <a property="schema:url" href="https://arxiv.org/pdf/2511.10449" target="_blank">PDF</a>
         <!-- <a href="#">Code</a> -->
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">NMR-2025</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">NMR-2025</span></div>
       <div class="paper-main">
-        <div class="paper-title">ABA Disputes in ASP: Advancing Argument Games through Multi-Shot Solving (NMR version)
+        <div class="paper-title" property="schema:name schema:headline">ABA Disputes in ASP: Advancing Argument Games through Multi-Shot Solving (NMR version)
         </div>
-        <div class="paper-authors">Diller and Gorczyca</div>
+        <div class="paper-authors">
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Diller</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Martin_Diller/en"></span> and
+          <span property="schema:author" resource="">Gorczyca</span>
+        </div>
       </div>
       <div class="paper-links">
         <!-- <a href="https://cl-tud.github.io/talks/2025/nmr/aba-disputes-in-asp/" target="_blank">Slides</a> -->
-        <a href="https://iccl.inf.tu-dresden.de/w/images/6/61/Nmr-diller-gorczyca2.pdf" target="_blank">PDF</a>
+        <a property="schema:url" href="https://iccl.inf.tu-dresden.de/w/images/6/61/Nmr-diller-gorczyca2.pdf" target="_blank">PDF</a>
         <!-- <a href="#">Code</a> -->
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">PRIMA-2025</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">PRIMA-2025</span></div>
       <div class="paper-main">
-        <div class="paper-title">ABA Disputes in ASP: Advancing Argument Games through Multi-Shot Solving (PRIMA
+        <div class="paper-title" property="schema:name schema:headline">ABA Disputes in ASP: Advancing Argument Games through Multi-Shot Solving (PRIMA
           version)</div>
-        <div class="paper-authors">Diller and Gorczyca</div>
+        <div class="paper-authors">
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Diller</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Martin_Diller/en"></span> and
+          <span property="schema:author" resource="">Gorczyca</span>
+        </div>
       </div>
       <div class="paper-links">
         <!-- <a href="https://cl-tud.github.io/talks/2025/prima/aba-disputes-in-asp/" target="_blank">Slides</a> -->
-        <a href="https://iccl.inf.tu-dresden.de/w/images/3/37/Diller-gorczyca2025aba-disputes-in-asp.pdf"
+        <a property="schema:url" href="https://iccl.inf.tu-dresden.de/w/images/3/37/Diller-gorczyca2025aba-disputes-in-asp.pdf"
           target="_blank">PDF</a>
         <!-- <a href="#">Code</a> -->
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">SEMANTICS-2025</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">SEMANTICS-2025</span></div>
       <div class="paper-main">
-        <div class="paper-title">Supporting Risk Management for Medical Devices via the Riskman Ontology and Shapes
+        <div class="paper-title" property="schema:name schema:headline">Supporting Risk Management for Medical Devices via the Riskman Ontology and Shapes
         </div>
-        <div class="paper-authors">Gorczyca, Arndt, Diller, Hampe, Heidenreich, Kettmann, Krötzsch, Mennicke, Rudolph
-          and Straß</div>
+        <div class="paper-authors">
+          <span property="schema:author" resource="">Gorczyca</span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Arndt</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/D%C3%B6rthe_Arndt/en"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Diller</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Martin_Diller/en"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Hampe</span></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Heidenreich</span></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Kettmann</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Pascal_Kettmann"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Krötzsch</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Markus_Kr%C3%B6tzsch"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Mennicke</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Stephan_Mennicke/en"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Rudolph</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Sebastian_Rudolph/en"></span> and
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Straß</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/en"></span>
+        </div>
+      </div>
+      <div class="paper-links">
+        <a href="https://gorczyca.github.io/semantics-25-slides/" target="_blank">Slides</a>
+        <a property="schema:url" href="https://iccl.inf.tu-dresden.de/w/images/4/4a/Gorczyca-et-al2025supporting-risk-management-for-medical-devices-via-the-riskman-ontology-and-shapes.pdf"
+          target="_blank">PDF</a>
+        <!-- <a href="#">Code</a> -->
+      </div>
+    </div>
+
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">NMR-2024</span></div>
+      <div class="paper-main">
+        <div class="paper-title" property="schema:name schema:headline">Adding Standpoint Modalities to Non-Monotonic S4F: Preliminary Results</div>
+        <div class="paper-authors">
+          <span property="schema:author" resource="">Gorczyca</span> and
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Straß</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Hannes_Strass/en"></span>
+        </div>
       </div>
       <div class="paper-links">
         <a href="https://gorczyca.github.io/semantics-25-slides/" target="_blank">Slides</a>
@@ -89,25 +129,16 @@
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">NMR-2024</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">LPNMR-2022</span></div>
       <div class="paper-main">
-        <div class="paper-title">Adding Standpoint Modalities to Non-Monotonic S4F: Preliminary Results</div>
-        <div class="paper-authors">Gorczyca and Straß</div>
-      </div>
-      <div class="paper-links">
-        <a href="https://gorczyca.github.io/semantics-25-slides/" target="_blank">Slides</a>
-        <a href="https://iccl.inf.tu-dresden.de/w/images/4/4a/Gorczyca-et-al2025supporting-risk-management-for-medical-devices-via-the-riskman-ontology-and-shapes.pdf"
-          target="_blank">PDF</a>
-        <!-- <a href="#">Code</a> -->
-      </div>
-    </div>
-
-    <div class="paper">
-      <div class="paper-venue">LPNMR-2022</div>
-      <div class="paper-main">
-        <div class="paper-title">A Practical Account into Counting Dung’s Extensions by Dynamic Programming</div>
-        <div class="paper-authors">Dewoprabowo, Fichte, Gorczyca and Hecher</div>
+        <div class="paper-title" property="schema:name schema:headline">A Practical Account into Counting Dung’s Extensions by Dynamic Programming</div>
+        <div class="paper-authors">
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Dewoprabowo</span></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Fichte</span><meta property="schema:url" content="https://liu.se/en/employee/johfi52"></span>,
+          <span property="schema:author" resource="">Gorczyca</span> and
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Hecher</span><meta property="schema:url" content="https://dbai.tuwien.ac.at/staff/hecher/"></span>
+        </div>
       </div>
       <div class="paper-links">
         <!-- <a href="https://iccl.inf.tu-dresden.de/w/images/4/4a/Gorczyca-et-al2025supporting-risk-management-for-medical-devices-via-the-riskman-ontology-and-shapes.pdf" target="_blank">PDF</a> -->
@@ -116,28 +147,36 @@
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">SAFA-2022</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">SAFA-2022</span></div>
       <div class="paper-main">
-        <div class="paper-title">Strategies in Flexible Dispute Derivations for Assumption-Based Argumentation</div>
-        <div class="paper-authors">Diller, Gaggl and Gorczyca</div>
+        <div class="paper-title" property="schema:name schema:headline">Strategies in Flexible Dispute Derivations for Assumption-Based Argumentation</div>
+        <div class="paper-authors">
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Diller</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Martin_Diller/en"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Gaggl</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Sarah_Alice_Gaggl/en"></span> and
+          <span property="schema:author" resource="">Gorczyca</span>
+        </div>
       </div>
       <div class="paper-links">
-        <a href="https://iccl.inf.tu-dresden.de/w/images/7/73/DGG2022.pdf" target="_blank">PDF</a>
+        <a property="schema:url" href="https://iccl.inf.tu-dresden.de/w/images/7/73/DGG2022.pdf" target="_blank">PDF</a>
         <!-- <a href="https://iccl.inf.tu-dresden.de/w/images/c/c4/Dpdb_argu_LPNMR_2022.pdf" target="_blank">Slides</a> -->
         <!-- <a href="#">Code</a> -->
       </div>
     </div>
 
-    <div class="paper">
-      <div class="paper-venue">CLAR-2021</div>
+    <div class="paper" typeof="schema:ScholarlyArticle">
+      <div class="paper-venue" property="schema:publisher" typeof="schema:Organization"><span property="schema:name">CLAR-2021</span></div>
       <div class="paper-main">
-        <div class="paper-title">Flexible Dispute Derivations with Forward and Backward Arguments for Assumption-Based
+        <div class="paper-title" property="schema:name schema:headline">Flexible Dispute Derivations with Forward and Backward Arguments for Assumption-Based
           Argumentation</div>
-        <div class="paper-authors">Diller, Gaggl and Gorczyca</div>
+        <div class="paper-authors">
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Diller</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Martin_Diller/en"></span>,
+          <span property="schema:author" typeof="schema:Person"><span property="schema:name">Gaggl</span><meta property="schema:url" content="https://iccl.inf.tu-dresden.de/web/Sarah_Alice_Gaggl/en"></span> and
+          <span property="schema:author" resource="">Gorczyca</span>
+        </div>
       </div>
       <div class="paper-links">
-        <a href="https://iccl.inf.tu-dresden.de/w/images/5/50/Diller2021_Chapter_FlexibleDisputeDerivationsWith.pdf"
+        <a property="schema:url" href="https://iccl.inf.tu-dresden.de/w/images/5/50/Diller2021_Chapter_FlexibleDisputeDerivationsWith.pdf"
           target="_blank">PDF</a>
         <!-- <a href="https://iccl.inf.tu-dresden.de/w/images/c/c4/Dpdb_argu_LPNMR_2022.pdf" target="_blank">Slides</a> -->
         <!-- <a href="#">Code</a> -->
@@ -151,60 +190,84 @@
   <section id="software">
     <h2>Software</h2>
 
-    <div class="software-item">
-      <div class="software-name">MS-DIS</div>
-      <div class="software-desc">Modular, multi-shot ASP implementation for formal argumentation games.</div>
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">MS-DIS</div>
+      <div class="software-desc" property="schema:description">Modular, multi-shot ASP implementation for formal argumentation games.</div>
       <div class="software-links">
-        <a href="https://github.com/gorczyca/ms-dis" target="_blank">GitHub</a>
+        <a property="schema:codeRepository" href="https://github.com/gorczyca/ms-dis" target="_blank">GitHub</a>
         <!-- <a href="#">Docs</a> -->
       </div>
     </div>
 
-    <div class="software-item">
-      <div class="software-name">Riskman</div>
-      <div class="software-desc">OWL ontology and SHACL shapes for risk management for medical devices.</div>
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">Riskman</div>
+      <div class="software-desc" property="schema:description">OWL ontology and SHACL shapes for risk management for medical devices.</div>
       <div class="software-links">
-        <a href="https://w3id.org/riskman" target="_blank">Docs</a>
+        <a property="schema:url" href="https://w3id.org/riskman" target="_blank">Docs</a>
         <!-- <a href="#">Docs</a> -->
       </div>
     </div>
 
-    <div class="software-item">
-      <div class="software-name">Riskman VSCode Extension</div>
-      <div class="software-desc">VSCode extension supporting the Riskman ontology and SHACL shapes approach.</div>
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">Riskman VSCode Extension</div>
+      <div class="software-desc" property="schema:description">VSCode extension supporting the Riskman ontology and SHACL shapes approach.</div>
       <div class="software-links">
-        <a href="https://marketplace.visualstudio.com/items?itemName=gorczyca.riskman" target="_blank">VSC
+        <a property="schema:url" href="https://marketplace.visualstudio.com/items?itemName=gorczyca.riskman" target="_blank">VSC
           Marketplace</a>
-        <a href="https://github.com/cl-tud/riskman-vsc-extension" target="_blank">Github</a>
+        <a property="schema:codeRepository" href="https://github.com/cl-tud/riskman-vsc-extension" target="_blank">Github</a>
       </div>
     </div>
 
-    <div class="software-item">
-      <div class="software-name">nm-s4fsl-asp</div>
-      <div class="software-desc">Disjunctive ASP encoding of non-monotonic S4F standpoint logic.</div>
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">nm-s4fsl-asp</div>
+      <div class="software-desc" property="schema:description">Disjunctive ASP encoding of non-monotonic S4F standpoint logic.</div>
       <div class="software-links">
-        <a href="https://github.com/cl-tud/nm-s4fsl-asp" target="_blank">GitHub</a>
+        <a property="schema:codeRepository" href="https://github.com/cl-tud/nm-s4fsl-asp" target="_blank">GitHub</a>
         <!-- <a href="#">Docs</a> -->
       </div>
     </div>
 
-    <div class="software-item">
-      <div class="software-name">flexABle</div>
-      <div class="software-desc">Commandline Scala tool for flexible argumentation-based disputes.</div>
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">flexABle</div>
+      <div class="software-desc" property="schema:description">Commandline Scala tool for flexible argumentation-based disputes.</div>
       <div class="software-links">
-        <a href="https://github.com/gorczyca/aba-dd-rule-based" target="_blank">GitHub</a>
+        <a property="schema:codeRepository" href="https://github.com/gorczyca/aba-dd-rule-based" target="_blank">GitHub</a>
         <!-- <a href="#">Docs</a> -->
       </div>
     </div>
 
-    <div class="software-item">
-      <div class="software-name">A-Folio-DPDB</div>
-      <div class="software-desc">DMBS-based, dynamic programming portfolio implementation of abstract argumentation
+    <div class="software-item" typeof="schema:SoftwareApplication">
+      <meta property="schema:applicationCategory" content="DeveloperApplication">
+      <meta property="schema:operatingSystem" content="Windows">
+      <meta property="schema:operatingSystem" content="macOS">
+      <meta property="schema:operatingSystem" content="Linux">
+      <div class="software-name" property="schema:name">A-Folio-DPDB</div>
+      <div class="software-desc" property="schema:description">DMBS-based, dynamic programming portfolio implementation of abstract argumentation
         reasoning tasks. Winner of two subtracks at <a
           href="https://argumentationcompetition.org/2021/downloads/iccma_results_ijcai.pdf"
           target="_blank">ICCMA-2021</a>.</div>
       <div class="software-links">
-        <a href="https://github.com/gorczyca/dp_on_dbs" target="_blank">GitHub</a>
+        <a property="schema:codeRepository" href="https://github.com/gorczyca/dp_on_dbs" target="_blank">GitHub</a>
         <!-- <a href="#">Docs</a> -->
       </div>
     </div>
