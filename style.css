@@ -96,6 +96,21 @@ section h2 {
 
 .software-links a { margin-left: 10px; }
 
+.software-tags {
+  grid-column: 1;
+  margin-top: 5px;
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
 /* Footer */
 footer {
   margin-top: auto;
@@ -123,4 +138,6 @@ footer {
   .paper-venue { color: #c9b89a; }
   .paper-authors,
   .software-desc { color: #b8a090; }
+
+  .tag { background: rgba(255, 255, 255, 0.1); }
 }
